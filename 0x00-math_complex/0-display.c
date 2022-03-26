@@ -33,14 +33,14 @@ void display_complex_number(complex c)
 	{
 		if (c.im < 0)
 		{
-			printf("- ");
+			printf(" - ");
 			c.im *= -1;
 		}
 		else
-			printf("+ ");
+			printf(" + ");
 		if (c.im != 1)
 			print_double(c.im);
-		printf("i ");
+		printf("i");
 	}
 	printf("\n");
 }
