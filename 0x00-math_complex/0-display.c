@@ -40,7 +40,7 @@ void display_complex_number(complex c)
 			printf("+ ");
 		if (c.im != 1)
 			print_double(c.im);
-		printf("i");
+		printf("i ");
 	}
 	printf("\n");
 }
