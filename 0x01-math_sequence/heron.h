@@ -1,10 +1,8 @@
 #ifndef _HERON_H_
 #define _HERON_H_
 #include <stdlib.h>
-#include <math.h>
 #include <ctype.h>
-#include <string.h>
-#include <stdio.h>
+
 /**
  * struct s_cell - singly linked list
  * @elt: long float element
