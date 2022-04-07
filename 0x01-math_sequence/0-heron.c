@@ -1,6 +1,23 @@
 #include "heron.h"
 
 /**
+ * _sqrt - returns the natural square root of a number.
+ * @n: int variable input
+ * Return: int value output
+ */
+double _sqrt(double n)
+{
+	double sqrt = n / 2, tmp = 0;
+
+	while (sqrt != tmp)
+	{
+		tmp = sqrt;
+		sqrt = (n / tmp + tmp) / 2;
+	}
+
+	return (sqrt);
+}
+/**
  * _round - find the fake round for two doblue match
  * @elt: double input
  * @sqrtP: double input
@@ -47,7 +64,7 @@ t_cell *add_node_end(t_cell **head, double p, double x0)
 	new->next = *head;
 	*head = new;
 
-	if (!_round(new->elt, sqrt(p), 7))
+	if (!_round(new->elt, _sqrt(p), 7))
 		add_node_end(head, p, new->elt);
 	return (*head);
 }
