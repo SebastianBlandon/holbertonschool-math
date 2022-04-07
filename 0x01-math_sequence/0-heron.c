@@ -59,7 +59,7 @@ t_cell *add_node_end(t_cell **head, double p, double x0)
 	if (!*head)
 		new->elt = x0;
 	else
-		new->elt = (1 / (float) 2) * (x0 + (p / (float) x0));
+		new->elt = (0.5) * (x0 + (p / (float) x0));
 
 	new->next = *head;
 	*head = new;
