@@ -31,7 +31,7 @@ int _round(double elt, double sqrtP, int error)
 
 	for (i = 0; i < error; i++)
 	{
-		if (round(elt) != round(sqrtP))
+		if ((int) (elt) % 10 != (int) (sqrtP) % 10)
 			return (0);
 		elt *= 10, sqrtP *= 10;
 	}
