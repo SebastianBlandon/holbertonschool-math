@@ -7,15 +7,15 @@
  */
 double _sqrt(double n)
 {
-	double sqrt = n / 2, tmp = 0;
+	double root = n / 2, tmp = 0;
 
-	while (sqrt != tmp)
+	while (root != tmp)
 	{
-		tmp = sqrt;
-		sqrt = (n / tmp + tmp) / 2;
+		tmp = root;
+		root = (n / tmp + tmp) / 2;
 	}
 
-	return (sqrt);
+	return (root);
 }
 /**
  * _round - find the fake round for two doblue match
