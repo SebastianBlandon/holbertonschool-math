@@ -1,8 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-#define MAXCOUNT 255
-#define length 1000
-#define width 1000
 
 /**
  * frees - frees the malloc
@@ -20,7 +17,7 @@ void frees(int **matrix, int index)
  */
 int main(void)
 {
-	int i, x, y, **image;
+	int i, x, y, length = 1000, width = 1000, **image, MAXCOUNT = 255;
 	double tmpx;
 	complex z, c;
 	FILE *pgmimg;
