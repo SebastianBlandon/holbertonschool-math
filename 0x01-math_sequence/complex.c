@@ -1,13 +1,30 @@
 #include "holberton.h"
 
 /**
+ * _sqrt - returns the natural square root of a number.
+ * @n: int variable input
+ * Return: int value output
+ */
+double _sqrt(double n)
+{
+	double root = n / 2, tmp = 0;
+
+	while (root != tmp)
+	{
+		tmp = root;
+		root = (n / tmp + tmp) / 2;
+	}
+
+	return (root);
+}
+/**
  * modulus - returns the modulus of a given complex number.
  * @c: complex struct input.
  * Return: double value output.
  */
 double modulus(complex c)
 {
-	return (sqrt(pow(c.re, 2) + pow(c.im, 2)));
+	return (_sqrt((c.re * c.re) + (c.im * c.im)));
 }
 
 /**
