@@ -1,10 +1,8 @@
 #ifndef HOLBERTON_H_
 #define HOLBERTON_H_
-
-#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <math.h>
+
 /**
  * struct num_complex - Struct complex numbers
  *
