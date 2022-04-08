@@ -18,7 +18,6 @@ void frees(int **matrix, int index)
 int main(void)
 {
 	int i, x, y, length = 1000, width = 1000, **image, MAXCOUNT = 255;
-	double tmpx;
 	complex z, c;
 	FILE *pgmimg;
 
@@ -40,10 +39,9 @@ int main(void)
 		{
 			c.re = (x - width / 2) * 4.0 / width, c.im = (y - length / 2) * 4.0 / width;
 			z.re = 0, z.im = 0, i = 0;
-			while (((z.re * z.re + z.im * z.im) < 4) && (i < MAXCOUNT))
+			while ((modulus(z) < 2) && (i < MAXCOUNT))
 			{
-				tmpx = z.re * z.re - z.im * z.im + c.re;
-				z.im = 2 * z.re * z.im + c.im, z.re = tmpx, i++;
+				multiplication(z, z, &z), addition(z, c, &z), i++;
 			} image[y][x] = i;
 		}
 	}
