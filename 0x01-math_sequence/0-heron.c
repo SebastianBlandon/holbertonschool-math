@@ -64,7 +64,7 @@ t_cell *add_node_end(t_cell **head, double p, double x0)
 	new->next = *head;
 	*head = new;
 
-	if (!_round(new->elt, _sqrt(p), 7))
+	if (!_round(new->elt, _sqrt(p), 8))
 		add_node_end(head, p, new->elt);
 	return (*head);
 }
