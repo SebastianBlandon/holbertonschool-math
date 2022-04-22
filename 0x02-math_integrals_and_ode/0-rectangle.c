@@ -9,11 +9,11 @@
  */
 double rectangle_method(double a, double b, int steps)
 {
-	int i = 0, n = steps;
+	int i = 0, n = steps + 1;
 	double result = 0, delta_x = ((b - a) / n), x_previous, x_present;
 
 	x_previous = (a + (i * delta_x)), i++;
-	while (i < steps)
+	while (i <= n)
 	{
 		x_present = (a + (i * delta_x));
 		result += (1 / (1 + pow((x_previous + x_present) / 2, 2)));
